@@ -1,6 +1,8 @@
-# TRMNL Firmware
+# Manipulated Firmare to make it compaitble with the Waveshare E-Paper ESP32 Driver Board
 
-created for the [TRMNL](https://usetrmnl.com) e-ink display.
+[https://www.waveshare.com/wiki/E-Paper_ESP32_Driver_Board#Resources](https://www.waveshare.com/wiki/E-Paper_ESP32_Driver_Board#Resources)
+
+~~created for the [TRMNL](https://usetrmnl.com) e-ink display.~~
 
 ## **Algorithm block scheme**
 
