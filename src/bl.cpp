@@ -25,6 +25,7 @@
 #include <special_function.h>
 #include <api_response_parsing.h>
 #include "logging_parcers.h"
+#include <esp_sleep.h>
 
 bool pref_clear = false;
 
@@ -1619,8 +1620,7 @@ static void goToSleep(void)
   preferences.putUInt(PREFERENCES_LAST_SLEEP_TIME, getTime());
   preferences.end();
   esp_sleep_enable_timer_wakeup((uint64_t)time_to_sleep * SLEEP_uS_TO_S_FACTOR);
-  esp_deep_sleep_enable_gpio_wakeup(1 << PIN_INTERRUPT,
-                                    ESP_GPIO_WAKEUP_GPIO_LOW);
+  esp_sleep_enable_ext0_wakeup(GPIO_NUM_23, 1);
   esp_deep_sleep_start();
 }
 

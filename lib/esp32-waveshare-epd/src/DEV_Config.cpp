@@ -37,7 +37,6 @@ void GPIO_Config(void)
     display_spi->begin(EPD_SCK_PIN, -1, EPD_MOSI_PIN);
     display_spi->setFrequency(20000000);
     //display_spi->beginTransaction(SPISettings(20000000, 1, 0));
-
     pinMode(EPD_BUSY_PIN, INPUT);
     pinMode(EPD_RST_PIN, OUTPUT);
     pinMode(EPD_DC_PIN, OUTPUT);
