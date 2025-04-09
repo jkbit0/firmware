@@ -1672,7 +1672,8 @@ static float readBatteryVoltage(void)
   int32_t sensorValue = (adc / 128) * 2;
 
   float voltage = sensorValue / 1000.0;
-  return voltage;
+  //return voltage; removed because no batttery
+  return 3.7;
 }
 
 /**
